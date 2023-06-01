@@ -28,7 +28,7 @@ area(5,4)
 /* SCRIVI QUI LA TUA RISPOSTA */
 const crazySum = function(n1, n2) {
     if (n1 !== n2) {
-        sum = n1 + n2
+        sum = n1 + n2 
     } else {
         sum = n1 + n2
         sum *= 3
@@ -46,6 +46,21 @@ crazySum(3,2)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const crazyDiff = function(n1) {
+    if (n1 < 19) {
+        diffResult = n1 - 19
+        diffResult = Math.abs(diffResult)
+    } else {
+        if (n1 > 19) {
+            diffResult = n1 - 19
+            diffResult *= 3
+        }
+    }
+    console.log('La crazy difference è:', diffResult);
+}
+
+crazyDiff(5)
+crazyDiff(30)
 
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
@@ -53,6 +68,19 @@ crazySum(3,2)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const boundary = function(n) {
+    if (n >=20 && n <=100){
+    console.log('n = true')    
+    } else if (n === 400) {
+    console.log('n = true')
+    } else {
+    console.log('n = false')
+    }
+}
+
+boundary(50)
+boundary(400)
+boundary(600)
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
@@ -61,6 +89,17 @@ crazySum(3,2)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const epify = function(insertString) {
+    if (insertString !== 'EPICODE') {
+        insertString = 'EPICODE' + ' ' + insertString
+    } else {
+        insertString = insertString
+    }
+    console.log(insertString);
+}
+
+epify('Ciao')
+epify('EPICODE')
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
@@ -68,12 +107,30 @@ crazySum(3,2)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const check3and7 = function(n) {
+    if (n >= 0 && n % 3 === 0) {
+        console.log('Il numero è divisibile per 3')
+    } else if (n >= 0 && n % 7 === 0) {
+        console.log('Il numero è divisibile per 7')
+    } else {
+        console.log('Il numero è negativo oppure non è un multiplo di 3 o di 7')
+    }
+}
+
+check3and7(9)
+check3and7(14)
+check3and7(10)
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const reverseString = function(insertString){
+    for (let i = 0; i < insertString.length; i++) {
+        insertString = insertString.chartAt(i)
+    }
+}
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
@@ -81,7 +138,17 @@ crazySum(3,2)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const upperFirst = function(insertString) {
+    const newString = insertString.split("")
+    console.log(newString)
+    for (let i = 0; i < newString.length; i++) {
+        if (newString.chartAt(i - 1) === ' ') {
+            newString
+        }
+    }
+}
 
+upperFirst('Ciao ciao')
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
